@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>WWLUG - West Wales Linux Users Group</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,40 +27,42 @@
           <a class="navbar-brand" href="/"><img src="img/title.png" alt="WWLUG" height=20px /></a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/links">Links</a></li>
+          <ul class="nav navbar-nav" id="navigation">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#links">Links</a></li>
           </ul>
         </div>
       </div>
     </div>
 
     <!-- Rest of the page -->
-    <div id="wrap">
-
-      <!-- Jumbotron -->
-      <div id="header" class="jumbotron">
-        <div class="container text-center">
-          <img id="jumbotron-title" class="img-rounded" src="img/title.png" alt="WWLUG Logo" />
+    <div id="wrap" class="tab-content">
+      <div class="tab-pane active" id="home">
+        <!-- Jumbotron -->
+        <div id="header" class="jumbotron">
+          <div class="container text-center">
+            <img id="jumbotron-title" class="img-rounded" src="img/title.png" alt="WWLUG Logo" />
+            <p>
+              Welcome to the West Wales <abbr title="Linux Users Group">LUG</abbr>, a group for GNU/Linux users in the West Wales area.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Main Content -->
+        <div class="container content">
+          <h2>Meetings and Discussions</h3>
           <p>
-            Welcome to the West Wales <abbr title="Linux Users Group">LUG</abbr>, a group for GNU/Linux users in the West Wales area.
+            You can join us at our meetings on the <strong>first Friday of the month</strong> at the <a href="http://osm.org/go/euZCb8wPT--?m=&way=55217442">Old College, Aberystwyth University</a> at <strong>7:00pm</strong>.
+          </p>
+          <p>
+            We primarily use facebook as a discussion platform outside of meetings, which can be found here: <a href="https://www.facebook.com/groups/aberlug/">WWLUG facebook group</a>.
           </p>
         </div>
       </div>
 
-      <!-- Main Content -->
-      <div class="container content">
-        <h2>Meetings and Discussions</h3>
-        <p>
-          You can join us at our meetings on the <strong>first Friday of the month</strong> at the <a href="http://osm.org/go/euZCb8wPT--?m=&way=55217442">Old College, Aberystwyth University</a> at <strong>7:00pm</strong>.
-        </p>
-        <p>
-          We primarily use facebook as a discussion platform outside of meetings, which can be found here: <a href="https://www.facebook.com/groups/aberlug/">WWLUG facebook group</a>.
-        </p>
-<!--        <p>
-          There is also the IRC channel <code>#wwlug</code> on <code>irc.freenode.net</code> which you can point your IRC clients at or quickly connect here: <a href="">#wwlug</a>.
-        </p>-->
+      <div class="tab-pane" id="events" >
+        <p>Lorem Ipsum...</p>
       </div>
     </div>
 
@@ -76,5 +78,11 @@
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(function() {
+        $('#navigation a:last').tab('show')
+      })
+    </script>
   </body>
 </html>
